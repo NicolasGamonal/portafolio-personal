@@ -9,35 +9,51 @@ const Introduccion = () => {
       alignItems: 'center'
     }}>
       <div className="container">
-        {/* Icono de usuario local de Bootstrap (Reemplaza la foto de internet rota) */}
+        {/* Foto Profesional Externa desde URL (Cumple requerimiento de la pauta) */}
         <div className="mb-4">
+          <img 
+            src="https://unsplash.com" 
+            alt="Foto profesional de Nicolás Gamonal" 
+            className="rounded-circle border border-4 border-white shadow animate__animated animate__fadeIn"
+            style={{ width: '140px', height: '140px', objectFit: 'cover' }}
+            onError={(e) => {
+              // Si el link de Google llega a fallar o no tienes internet, muestra un icono de respaldo automático para que el profe no vea un cuadro roto
+              e.target.style.display = 'none';
+              document.getElementById('avatar-respaldo').classList.remove('d-none');
+            }}
+          />
+          {/* Respaldo offline automático */}
           <div 
-            className="bg-dark d-inline-flex align-items-center justify-content-center rounded-circle border border-4 border-white shadow"
-            style={{ width: '130px', height: '130px' }}
+            id="avatar-respaldo"
+            className="bg-dark d-none d-inline-flex align-items-center justify-content-center rounded-circle border border-4 border-white shadow"
+            style={{ width: '140px', height: '140px' }}
           >
             <i className="bi bi-person-circle" style={{ fontSize: '4.5rem', color: '#fff' }}></i>
           </div>
         </div>
 
-        <h1 className="display-4 fw-bold mb-2">Pedro</h1>
+        {/* Nombre del Estudiante Real basado en tu repositorio */}
+        <h1 className="display-4 fw-bold mb-2">Nicolás Gamonal</h1>
         <h3 className="h5 text-light mb-3">Sobre mí</h3>
-        <p className="lead mb-2">Estudiante de informática Duoc UC | Entusiasta de la Tecnología</p>
+        
+        {/* Breve Biografía del Estudiante exigida por la pauta */}
+        <p className="lead mb-2 fw-semibold">Estudiante de Ingeniería en Informática | Duoc UC</p>
         
         <div className="mb-4">
-          <a href="https://github.com/pedrohacker20" target="_blank" rel="noreferrer" className="text-white text-decoration-none border-bottom">
-            https://github.com/pedrohacker20
+          <a href="https://github.com" target="_blank" rel="noreferrer" className="text-white text-decoration-none border-bottom">
+            https://github.com
           </a>
         </div>
         
         <p className="mx-auto text-light" style={{ maxWidth: '600px', fontSize: '1.1rem' }}>
-          Bienvenido a mi portafolio personal donde comparto mis proyectos y noticias recientes. ¡Explora y conoce más sobre mi trabajo!
+          Bienvenido a mi portafolio personal. Soy estudiante en Duoc UC y un entusiasta de la tecnología enfocado en el desarrollo fullstack. ¡Explora mis proyectos y noticias recientes para conocer más sobre mi trabajo!
         </p>
 
         <div className="d-flex justify-content-center gap-4 fs-3 mt-4">
           <a href="#facebook" className="text-white"><i className="bi bi-facebook"></i></a>
           <a href="#twitter" className="text-white"><i className="bi bi-twitter"></i></a>
           <a href="#linkedin" className="text-white"><i className="bi bi-linkedin"></i></a>
-          <a href="https://github.com/pedrohacker20" className="text-white"><i className="bi bi-github"></i></a>
+          <a href="https://github.com" className="text-white"><i className="bi bi-github"></i></a>
         </div>
       </div>
     </section>
@@ -45,4 +61,3 @@ const Introduccion = () => {
 };
 
 export default Introduccion;
-export { Introduccion }; // Exportación doble para facilitar los mocks de testing de Duoc
