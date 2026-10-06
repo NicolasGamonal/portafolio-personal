@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "titulo": "Noticia 1",
-    "fecha": "2024-08-01",
-    "contenido": "Contenido breve de la noticia."
+    "titulo": "Implementación de Arquitectura Limpia en React",
+    "fecha": "2026-10-05",
+    "contenido": "Se ha finalizado con éxito la migración estructural del portafolio hacia componentes modulares y reutilizables, optimizando el rendimiento de carga y asegurando un diseño responsivo mediante el uso de contenedores fluidos de Bootstrap."
   },
   {
     "id": 2,
-    "titulo": "Noticia 2",
-    "fecha": "2024-07-15",
-    "contenido": "Contenido breve de la noticia."
+    "titulo": "Integración Exitosa de Pruebas Unitarias Automatizadas",
+    "fecha": "2026-09-28",
+    "contenido": "Se integraron tres suites de pruebas lógicas para validar el comportamiento del Front-End. Los casos de prueba abarcan la verificación del renderizado en el DOM, simulación de estados dinámicos y la correcta manipulación de eventos onclick."
   }
 ]
