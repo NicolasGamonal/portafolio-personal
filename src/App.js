@@ -27,7 +27,7 @@ function App() {
 
       <footer className="text-center py-4 bg-dark text-white border-top border-secondary">
         <div className="container">
-          <p className="mb-0">&copy; 2024 Pedro. Todos los derechos reservados. | Duoc UC</p>
+          <p className="mb-0">&copy; 2024 Juan Juanito. Todos los derechos reservados. | Duoc UC</p>
         </div>
       </footer>
     </div>
