@@ -9,7 +9,8 @@ const Proyectos = ({ modoNoche }) => {
       descripcion: "Menú digital interactivo para un restaurante de avena premium. Don Juan administra platillos, reservas de mesas y pedidos en tiempo real con un diseño elegante.",
       tecnologias: ["React", "Bootstrap", "JavaScript (ES6)"],
       enlace: "/corral-gourmet.html",
-      colorFondo: "#0d6efd"
+      colorFondo: "#0d6efd",
+      imagen: "/lujoso_juan.jpg"
     },
     {
       id: 2,
@@ -18,7 +19,8 @@ const Proyectos = ({ modoNoche }) => {
       descripcion: "Portal web para arrendar establos y cuadras de lujo. Permite filtrar propiedades por tamaño, ubicación y servicios incluidos, con fichas detalladas por cada establo.",
       tecnologias: ["React", "JSON", "CSS3 Custom Properties"],
       enlace: "/establo-inmobiliario.html",
-      colorFondo: "#ffc107"
+      colorFondo: "#ffc107",
+      imagen: "/lujoso_inmobiliario_juan.jpg"
     },
     {
       id: 3,
@@ -26,8 +28,9 @@ const Proyectos = ({ modoNoche }) => {
       subtitulo: "ESTABLO GAMER",
       descripcion: "Plataforma interactiva donde Don Juan administra un catálogo de videojuegos retro. Incluye gestión de stock, perfiles de jugadores y un carrito con temática ecuestre.",
       tecnologias: ["React", "Bootstrap Icons", "Git / GitHub"],
-      enlace: "https://github.com/juanjuanito/establo-gamer",
-      colorFondo: "#198754"
+      enlace: "/establo-gamer.html",
+      colorFondo: "#198754",
+      imagen: "/lujoso_gamer_juan.jpg"
     }
   ];
 
@@ -39,12 +42,11 @@ const Proyectos = ({ modoNoche }) => {
           {listaProyectos.map((proyecto) => (
             <div className="col-12 col-md-4" key={proyecto.id}>
               <div className={`card h-100 shadow-sm border-0 ${modoNoche ? 'bg-dark text-white' : 'bg-white text-dark'}`}>
-                <div
-                  className="d-flex align-items-center justify-content-center text-white fw-bold fs-4"
-                  style={{ height: '200px', backgroundColor: proyecto.colorFondo, letterSpacing: '2px' }}
-                >
-                  {proyecto.subtitulo}
-                </div>
+                <img
+  src={proyecto.imagen}
+  alt={proyecto.titulo}
+  style={{ height: '200px', width: '100%', objectFit: 'cover' }}
+/>
 
                 <div className="card-body d-flex flex-column p-4">
                   <h5 className={`card-title fw-bold mb-3 ${modoNoche ? 'text-white' : 'text-dark'}`}>

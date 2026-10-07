@@ -13,7 +13,7 @@ const Introduccion = () => {
         <div className="mb-4">
           <img
             src="/fino_juan.webp"
-            alt="Foto profesional de Juan Juanito"
+            alt="Foto profesional de Don Juan"
             className="rounded-circle border border-4 border-white shadow"
             style={{ width: '140px', height: '140px', objectFit: 'cover' }}
             onError={(e) => {
@@ -21,7 +21,7 @@ const Introduccion = () => {
               document.getElementById('avatar-respaldo').classList.remove('d-none');
             }}
           />
-          {/* Respaldo offline automático */}
+          {/* Respaldo si la imagen falla */}
           <div
             id="avatar-respaldo"
             className="bg-dark d-none d-inline-flex align-items-center justify-content-center rounded-circle border border-4 border-white shadow"
@@ -32,9 +32,9 @@ const Introduccion = () => {
         </div>
 
         {/* Nombre y datos */}
-        <h1 className="display-4 fw-bold mb-2">Juan Juanito</h1>
-        <h3 className="h5 text-light mb-3">Sobre mí</h3>
-        <p className="lead mb-2 fw-semibold">Estudiante de Ingeniería en Informática | Duoc UC</p>
+        <h1 className="display-4 fw-bold mb-2">Don Juan</h1>
+        <h3 className="h5 text-light mb-3">Sobre el Magnate</h3>
+        <p className="lead mb-2 fw-semibold">Empresario Visionario | Fundador del Grupo Don Juan</p>
 
         <div className="mb-4">
           <a href="https://github.com/juanjuanito" target="_blank" rel="noreferrer" className="text-white text-decoration-none border-bottom">
@@ -42,8 +42,8 @@ const Introduccion = () => {
           </a>
         </div>
 
-        <p className="mx-auto text-light" style={{ maxWidth: '600px', fontSize: '1.1rem' }}>
-          Bienvenido a mi portafolio personal. Soy estudiante en Duoc UC y un entusiasta de la tecnología enfocado en el desarrollo fullstack. ¡Explora mis proyectos y noticias recientes para conocer más sobre mi trabajo!
+        <p className="mx-auto text-light" style={{ maxWidth: '650px', fontSize: '1.1rem' }}>
+          Bienvenido al portafolio empresarial de Don Juan, reconocido magnate del rubro ecuestre y fundador de un imperio comercial con presencia en múltiples industrias. Con una trayectoria impecable y una visión estratégica inigualable, Don Juan ha consolidado su marca como símbolo de excelencia, elegancia y éxito. Explore sus proyectos más destacados.
         </p>
 
         {/* Redes sociales */}

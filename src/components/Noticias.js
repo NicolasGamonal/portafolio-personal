@@ -8,6 +8,12 @@ const Noticias = ({ modoNoche }) => {
     setNoticias(datosNoticias);
   }, []);
 
+  // Mapeo de noticias a sus páginas HTML
+  const paginasNoticias = {
+    1: '/noticia-1.html',
+    2: '/noticia-2.html'
+  };
+
   return (
     <section id="noticias" className={`py-5 ${modoNoche ? 'bg-secondary text-white' : 'bg-white text-dark'}`}>
       <div className="container">
@@ -15,13 +21,21 @@ const Noticias = ({ modoNoche }) => {
         <div className="row g-4 justify-content-center">
           {noticias.map((noticia) => (
             <div className="col-12 col-md-5" key={noticia.id}>
-              {/* Usamos bg-dark para resaltar las tarjetas sobre el fondo gris */}
               <div className={`card p-4 shadow-sm border-0 h-100 ${modoNoche ? 'bg-dark text-white' : 'bg-light text-dark'}`}>
                 <h5 className="fw-bold mb-1">{noticia.titulo}</h5>
-                <span className={`small d-block mb-3 ${modoNoche ? 'text-light' : 'text-muted'}`}>Fecha: {noticia.fecha}</span>
-                <p className={modoNoche ? 'text-light' : 'text-secondary'}>{noticia.contenido}</p>
-                <a href="#leer-mas" className={`text-decoration-none mt-auto small fw-bold ${modoNoche ? 'text-warning' : 'text-primary'}`}>
-                  Leer más
+                <span className={`small d-block mb-3 ${modoNoche ? 'text-light' : 'text-muted'}`}>
+                  Fecha: {noticia.fecha}
+                </span>
+                <p className={modoNoche ? 'text-light' : 'text-secondary'}>
+                  {noticia.contenido}
+                </p>
+                <a
+                  href={paginasNoticias[noticia.id]}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`text-decoration-none mt-auto small fw-bold ${modoNoche ? 'text-warning' : 'text-primary'}`}
+                >
+                  Leer más →
                 </a>
               </div>
             </div>
